@@ -1,10 +1,13 @@
 import { Group, Image, Text } from '@mantine/core';
+import { forwardRef } from 'react';
+
 import { BORDERS } from '../constants/css';
 
-const Navbar = (props) => {
+const Navbar = forwardRef((props, ref) => {
   const { onLinkClick, refs } = props;
   return (
     <Group
+      ref={ref}
       position="apart"
       spacing="xl"
       sx={{
@@ -67,6 +70,6 @@ const Navbar = (props) => {
       </Group>
     </Group>
   );
-};
+});
 
 export default Navbar;

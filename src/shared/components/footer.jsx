@@ -9,7 +9,8 @@ import {
 } from '@mantine/core';
 // import { MdLocalPhone } from 'react-icons/md';
 
-const Footer = () => {
+const Footer = (props) => {
+  const { onLinkClick, refs } = props;
   return (
     <footer
       style={{
@@ -35,23 +36,42 @@ const Footer = () => {
           </Grid.Col>
           <Grid.Col offset={2} span={1}>
             <Group direction="column" spacing="xs">
-              <Text size="xs" sx={{ textTransform: 'uppercase' }}>
+              <Text
+                onClick={() => onLinkClick(refs.home)}
+                size="xs"
+                sx={{ textTransform: 'uppercase', cursor: 'pointer' }}
+              >
                 Home
               </Text>
-              <Text size="xs" sx={{ textTransform: 'uppercase' }}>
+              <Text
+                onClick={() => onLinkClick(refs.services)}
+                size="xs"
+                sx={{ textTransform: 'uppercase', cursor: 'pointer' }}
+              >
                 Services
               </Text>
-              <Text size="xs" sx={{ textTransform: 'uppercase' }}>
+              <Text
+                onClick={() => onLinkClick(refs.about)}
+                size="xs"
+                sx={{ textTransform: 'uppercase', cursor: 'pointer' }}
+              >
                 About
               </Text>
             </Group>
           </Grid.Col>
           <Grid.Col span={3}>
             <Group direction="column" spacing="xs">
-              <Text size="xs" sx={{ textTransform: 'uppercase' }}>
+              <Text
+                onClick={() => onLinkClick(refs.contact)}
+                size="xs"
+                sx={{ textTransform: 'uppercase', cursor: 'pointer' }}
+              >
                 Contact
               </Text>
-              <Text size="xs" sx={{ textTransform: 'uppercase' }}>
+              <Text
+                size="xs"
+                sx={{ textTransform: 'uppercase', cursor: 'pointer' }}
+              >
                 Partners
               </Text>
             </Group>

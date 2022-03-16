@@ -10,11 +10,10 @@ import {
 } from '@mantine/core';
 import rightSVG from '../shared/static/images/right.svg';
 
-const Home = forwardRef((props, ref) => {
+const Home = () => {
   return (
     <section id="home">
       <Container
-        ref={ref}
         size="lg"
         sx={{
           height: '500px',
@@ -70,6 +69,6 @@ const Home = forwardRef((props, ref) => {
       </Container>
     </section>
   );
-});
+};
 
 export default Home;

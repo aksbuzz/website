@@ -23,6 +23,7 @@ const App = () => {
       <NormalizeCSS />
       <BackgroundImage src={background}>
         <Navbar
+          ref={$homeRef}
           onLinkClick={handleScroll}
           refs={{
             contact: $contactRef,
@@ -31,12 +32,20 @@ const App = () => {
             about: $aboutRef,
           }}
         />
-        <Home ref={$homeRef} />
+        <Home />
       </BackgroundImage>
       <Services ref={$servicesRef} />
       <About ref={$aboutRef} />
       <ContactUs ref={$contactRef} />
-      <Footer />
+      <Footer
+        onLinkClick={handleScroll}
+        refs={{
+          contact: $contactRef,
+          home: $homeRef,
+          services: $servicesRef,
+          about: $aboutRef,
+        }}
+      />
     </>
   );
 };
