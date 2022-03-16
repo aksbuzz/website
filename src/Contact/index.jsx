@@ -64,9 +64,43 @@ const ContactUs = forwardRef((props, ref) => {
               }}
             >
               <form>
-                <TextInput type="text" label="Full name" size="md" pb="30px" />
-                <TextInput type="email" label="E-mail" size="md" pb="30px" />
+                <TextInput
+                  styles={{
+                    label: {
+                      color: '#656b70',
+                      fontSize: '12px',
+                      fontWeight: '600',
+                      marginBottom: '0px',
+                    },
+                  }}
+                  type="text"
+                  label="Full name"
+                  size="md"
+                  pb="30px"
+                />
+                <TextInput
+                  styles={{
+                    label: {
+                      color: '#656b70',
+                      fontSize: '12px',
+                      fontWeight: '600',
+                      marginBottom: '0px',
+                    },
+                  }}
+                  type="email"
+                  label="E-mail"
+                  size="md"
+                  pb="30px"
+                />
                 <Textarea
+                  styles={{
+                    label: {
+                      color: '#656b70',
+                      fontSize: '12px',
+                      fontWeight: '600',
+                      marginBottom: '0px',
+                    },
+                  }}
                   label="Message"
                   autosize
                   minRows={4}

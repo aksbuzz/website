@@ -23,9 +23,11 @@ const Navbar = forwardRef((props, ref) => {
           onClick={() => onLinkClick(refs.home)}
           sx={{
             color: 'white',
+            transition: 'all 0.2s ease',
             '&:hover': {
               textDecoration: 'none',
               cursor: 'pointer',
+              color: '#dad7cd',
             },
           }}
         >
@@ -38,6 +40,7 @@ const Navbar = forwardRef((props, ref) => {
             '&:hover': {
               textDecoration: 'none',
               cursor: 'pointer',
+              color: '#dad7cd',
             },
           }}
         >
@@ -50,6 +53,7 @@ const Navbar = forwardRef((props, ref) => {
             '&:hover': {
               textDecoration: 'none',
               cursor: 'pointer',
+              color: '#dad7cd',
             },
           }}
         >
@@ -62,6 +66,7 @@ const Navbar = forwardRef((props, ref) => {
             '&:hover': {
               textDecoration: 'none',
               cursor: 'pointer',
+              color: '#dad7cd',
             },
           }}
         >

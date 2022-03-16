@@ -1,4 +1,3 @@
-import { forwardRef } from 'react';
 import {
   Button,
   Container,
@@ -27,6 +26,7 @@ const Home = () => {
             <Group direction="column">
               <Title
                 order={1}
+                className="animate__animated animate__fadeInDown animate__faster"
                 style={{
                   fontSize: '4rem',
                   color: '#d8f3dc',
@@ -35,6 +35,7 @@ const Home = () => {
                 Main content heading
               </Title>
               <p
+                className="animate__animated animate__fadeInDown animate__faster"
                 style={{
                   color: '#d8f3dc',
                   lineHeight: '1.4',
@@ -44,6 +45,7 @@ const Home = () => {
                 service while offering our employees the best training.
               </p>
               <Button
+                className="animate__animated animate__fadeIn animate__faster"
                 sx={{
                   background: '#1b4332',
                   paddingLeft: '35px',
@@ -55,14 +57,22 @@ const Home = () => {
                   },
                 }}
                 size="lg"
+                mt="15px"
               >
                 Get Started
               </Button>
             </Group>
           </Grid.Col>
-          <Grid.Col span={4} offset={2}>
+          <Grid.Col
+            span={4}
+            offset={2}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
             <Group>
-              <Image src={rightSVG} />
+              <Image
+                className="animate__animated animate__fadeInDown animate__faster"
+                src={rightSVG}
+              />
             </Group>
           </Grid.Col>
         </Grid>

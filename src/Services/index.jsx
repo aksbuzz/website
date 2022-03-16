@@ -36,7 +36,7 @@ const Services = forwardRef((props, ref) => {
           Lorem ipsum doler sit amet, consectetur adipiscing elit, sed do
           eiusmod
         </Text>
-        <Grid gutter={50}>
+        <Grid gutter={50} sx={{ marginBottom: '50px' }}>
           <Grid.Col span={4} gutter="xl">
             <Group direction="column" position="center">
               <Image withPlaceholder width={50} height={50} radius="lg" />
@@ -171,7 +171,7 @@ const Services = forwardRef((props, ref) => {
             </Group>
           </Grid.Col>
         </Grid>
-        <Grid gutter={40} sx={{ marginBottom: '50px' }}>
+        <Grid gutter={40}>
           <Grid.Col
             span={6}
             sx={{
