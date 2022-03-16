@@ -1,0 +1,12 @@
+Design
+   About
+   Testimonial
+   Logos / Partners
+   Careers
+   Form, update stylings
+
+Delpoy
+
+Add scroll to section animation
+Add animation to element when they load.
+
