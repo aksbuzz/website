@@ -31,7 +31,7 @@ const Services = () => {
             color: 'grey',
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          Lorem ipsum doler sit amet, consectetur adipiscing elit, sed do
           eiusmod
         </Text>
         <Grid gutter={50}>
