@@ -1,7 +1,8 @@
-import { Anchor, Group, Image } from '@mantine/core';
+import { Group, Image, Text } from '@mantine/core';
 import { BORDERS } from '../constants/css';
 
-const Navbar = () => {
+const Navbar = (props) => {
+  const { onLinkClick, refs } = props;
   return (
     <Group
       position="apart"
@@ -15,50 +16,54 @@ const Navbar = () => {
     >
       <Image radius="xs" withPlaceholder width={200} height={50} />
       <Group position="apart" sx={{ gap: '40px' }}>
-        <Anchor
-          href="#home"
+        <Text
+          onClick={() => onLinkClick(refs.home)}
           sx={{
             color: 'white',
             '&:hover': {
               textDecoration: 'none',
+              cursor: 'pointer',
             },
           }}
         >
           Home
-        </Anchor>
-        <Anchor
-          href="#services"
+        </Text>
+        <Text
+          onClick={() => onLinkClick(refs.services)}
           sx={{
             color: 'white',
             '&:hover': {
               textDecoration: 'none',
+              cursor: 'pointer',
             },
           }}
         >
           Services
-        </Anchor>
-        <Anchor
-          href="#about"
+        </Text>
+        <Text
+          onClick={() => onLinkClick(refs.about)}
           sx={{
             color: 'white',
             '&:hover': {
               textDecoration: 'none',
+              cursor: 'pointer',
             },
           }}
         >
           About
-        </Anchor>
-        <Anchor
-          href="#contact"
+        </Text>
+        <Text
+          onClick={() => onLinkClick(refs.contact)}
           sx={{
             color: 'white',
             '&:hover': {
               textDecoration: 'none',
+              cursor: 'pointer',
             },
           }}
         >
           Contact
-        </Anchor>
+        </Text>
       </Group>
     </Group>
   );

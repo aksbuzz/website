@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import { forwardRef } from 'react';
 import {
   Button,
   Card,
@@ -19,16 +20,16 @@ import {
 } from 'react-icons/md';
 import { BORDERS } from '../shared/constants/css';
 
-const ContactUs = () => {
+const ContactUs = forwardRef((props, ref) => {
   return (
     <section
-      id="contact"
+      ref={ref}
       style={{
         padding: '50px 0px',
         background: '#d8f3dc',
       }}
     >
-      <Container size="md">
+      <Container ref={ref} size="md">
         <Title
           order={1}
           sx={{
@@ -190,6 +191,6 @@ const ContactUs = () => {
       </Container>
     </section>
   );
-};
+});
 
 export default ContactUs;

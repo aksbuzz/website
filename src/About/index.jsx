@@ -1,6 +1,7 @@
+import { forwardRef } from 'react';
 import { Container, Divider, Title } from '@mantine/core';
 
-const About = () => {
+const About = forwardRef((props, ref) => {
   return (
     <section
       id="about"
@@ -9,7 +10,7 @@ const About = () => {
         // background: '#d8f3dc',
       }}
     >
-      <Container size="md">
+      <Container ref={ref} size="md">
         <Title
           order={1}
           sx={{
@@ -32,6 +33,6 @@ const About = () => {
       </Container>
     </section>
   );
-};
+});
 
 export default About;

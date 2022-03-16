@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import {
   Button,
   Container,
@@ -9,10 +10,11 @@ import {
 } from '@mantine/core';
 import rightSVG from '../shared/static/images/right.svg';
 
-const Home = () => {
+const Home = forwardRef((props, ref) => {
   return (
     <section id="home">
       <Container
+        ref={ref}
         size="lg"
         sx={{
           height: '500px',
@@ -68,6 +70,6 @@ const Home = () => {
       </Container>
     </section>
   );
-};
+});
 
 export default Home;

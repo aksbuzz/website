@@ -1,3 +1,5 @@
+import { forwardRef } from 'react';
+
 import {
   Container,
   Divider,
@@ -8,10 +10,10 @@ import {
   Title,
 } from '@mantine/core';
 
-const Services = () => {
+const Services = forwardRef((props, ref) => {
   return (
     <section id="services" style={{ padding: '50px 0px 0px 0px' }}>
-      <Container size="md">
+      <Container size="md" ref={ref}>
         <Title
           order={1}
           sx={{
@@ -194,6 +196,6 @@ const Services = () => {
       </Container>
     </section>
   );
-};
+});
 
 export default Services;
