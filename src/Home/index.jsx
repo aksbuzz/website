@@ -30,6 +30,7 @@ const Home = () => {
                 style={{
                   fontSize: '4rem',
                   color: '#d8f3dc',
+                  fontFamily: 'open-sans',
                 }}
               >
                 Main content heading
@@ -59,7 +60,7 @@ const Home = () => {
                 size="lg"
                 mt="15px"
               >
-                Get Started
+                CTA Button
               </Button>
             </Group>
           </Grid.Col>

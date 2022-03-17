@@ -18,6 +18,7 @@ const About = forwardRef((props, ref) => {
             textAlign: 'center',
             paddingBottom: '20px',
             fontSize: '2.5rem',
+            fontFamily: 'open-sans',
           }}
         >
           About Us

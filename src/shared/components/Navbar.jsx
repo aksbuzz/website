@@ -1,4 +1,4 @@
-import { Group, Image, Text } from '@mantine/core';
+import { Button, Group, Image, Text } from '@mantine/core';
 import { forwardRef } from 'react';
 
 import { BORDERS } from '../constants/css';
@@ -72,6 +72,18 @@ const Navbar = forwardRef((props, ref) => {
         >
           Contact
         </Text>
+        <Button
+          className="animate__animated animate__fadeIn animate__faster"
+          sx={{
+            background: '#1b4332',
+            '&:hover': {
+              background: '#1b4332cc',
+            },
+          }}
+          size="md"
+        >
+          CTA Button
+        </Button>
       </Group>
     </Group>
   );

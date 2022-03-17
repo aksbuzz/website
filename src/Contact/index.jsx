@@ -37,6 +37,7 @@ const ContactUs = forwardRef((props, ref) => {
             textAlign: 'center',
             paddingBottom: '20px',
             fontSize: '2.5rem',
+            fontFamily: 'open-sans',
           }}
         >
           Get In Touch
@@ -124,7 +125,7 @@ const ContactUs = forwardRef((props, ref) => {
                 justifyContent: 'flex-start',
               }}
             >
-              <Title order={3} pb="20px">
+              <Title order={3} pb="20px" sx={{ fontFamily: 'open-sans' }}>
                 We'd love to hear from you.
               </Title>
               <Text

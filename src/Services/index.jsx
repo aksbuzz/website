@@ -21,6 +21,7 @@ const Services = forwardRef((props, ref) => {
             textAlign: 'center',
             paddingBottom: '20px',
             fontSize: '2.5rem',
+            fontFamily: 'open-sans',
           }}
         >
           Service section heading
@@ -40,8 +41,10 @@ const Services = forwardRef((props, ref) => {
           <Grid.Col span={4} gutter="xl">
             <Group direction="column" position="center">
               <Image withPlaceholder width={50} height={50} radius="lg" />
-              <Title order={4}>High-Quality Service</Title>
-              <Text size="md" align="center">
+              <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                High-Quality Service
+              </Title>
+              <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
                 A pseudo-Latin text used in web design, layout, and printing in
                 place of things to emphasise design.
               </Text>
@@ -52,8 +55,10 @@ const Services = forwardRef((props, ref) => {
               <div>
                 <Image withPlaceholder width={50} height={50} radius="lg" />
               </div>
-              <Title order={4}>High-Quality Service</Title>
-              <Text size="md" align="center">
+              <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                High-Quality Service
+              </Title>
+              <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
                 A pseudo-Latin text used in web design, layout, and printing in
                 place of things to emphasise design.
               </Text>
@@ -62,8 +67,10 @@ const Services = forwardRef((props, ref) => {
           <Grid.Col span={4}>
             <Group direction="column" position="center">
               <Image withPlaceholder width={50} height={50} radius="lg" />
-              <Title order={4}>High-Quality Service</Title>
-              <Text size="md" align="center">
+              <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                High-Quality Service
+              </Title>
+              <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
                 A pseudo-Latin text used in web design, layout, and printing in
                 place of things to emphasise design.
               </Text>
@@ -74,8 +81,10 @@ const Services = forwardRef((props, ref) => {
           <Grid.Col span={4}>
             <Group direction="column" position="center">
               <Image withPlaceholder width={50} height={50} radius="lg" />
-              <Title order={4}>High-Quality Service</Title>
-              <Text size="md" align="center">
+              <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                High-Quality Service
+              </Title>
+              <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
                 A pseudo-Latin text used in web design, layout, and printing in
                 place of things to emphasise design.
               </Text>
@@ -86,8 +95,10 @@ const Services = forwardRef((props, ref) => {
               <div>
                 <Image withPlaceholder width={50} height={50} radius="lg" />
               </div>
-              <Title order={4}>High-Quality Service</Title>
-              <Text size="md" align="center">
+              <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                High-Quality Service
+              </Title>
+              <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
                 A pseudo-Latin text used in web design, layout, and printing in
                 place of things to emphasise design.
               </Text>
@@ -96,8 +107,10 @@ const Services = forwardRef((props, ref) => {
           <Grid.Col span={4}>
             <Group direction="column" position="center">
               <Image withPlaceholder width={50} height={50} radius="lg" />
-              <Title order={4}>High-Quality Service</Title>
-              <Text size="md" align="center">
+              <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                High-Quality Service
+              </Title>
+              <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
                 A pseudo-Latin text used in web design, layout, and printing in
                 place of things to emphasise design.
               </Text>
@@ -112,6 +125,7 @@ const Services = forwardRef((props, ref) => {
             textAlign: 'center',
             paddingBottom: '20px',
             fontSize: '2rem',
+            fontFamily: 'open-sans',
           }}
         >
           Features / Issues we solve heading
@@ -137,8 +151,10 @@ const Services = forwardRef((props, ref) => {
             }}
           >
             <Group direction="column">
-              <Title order={3}>Advanced features</Title>
-              <Text size="md" align="left">
+              <Title order={3} sx={{ fontFamily: 'open-sans' }}>
+                Advanced features
+              </Title>
+              <Text size="md" align="left" sx={{ color: '#3C4A57' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Excepteur sint occaecat cupidatat non proident.
@@ -162,8 +178,10 @@ const Services = forwardRef((props, ref) => {
             }}
           >
             <Group direction="column">
-              <Title order={3}>Advanced features</Title>
-              <Text size="md" align="left">
+              <Title order={3} sx={{ fontFamily: 'open-sans' }}>
+                Advanced features
+              </Title>
+              <Text size="md" align="left" sx={{ color: '#3C4A57' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Excepteur sint occaecat cupidatat non proident.
@@ -181,8 +199,10 @@ const Services = forwardRef((props, ref) => {
             }}
           >
             <Group direction="column">
-              <Title order={3}>Advanced features</Title>
-              <Text size="md" align="left">
+              <Title order={3} sx={{ fontFamily: 'open-sans' }}>
+                Advanced features
+              </Title>
+              <Text size="md" align="left" sx={{ color: '#3C4A57' }}>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Excepteur sint occaecat cupidatat non proident.
