@@ -10,7 +10,7 @@ import {
   Title,
 } from '@mantine/core';
 import Partners from '../Partners';
-import ContactUsImage from '../shared/static/images/contact_us.svg'
+import ContactUsImage from '../shared/static/images/contact_us.svg';
 
 const Services = forwardRef((props, ref) => {
   return (
@@ -229,7 +229,12 @@ const Services = forwardRef((props, ref) => {
         }}
       >
         <Container size="md">
-          <Grid>
+          <Grid
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
             <Grid.Col span={6}>
               <Group direction="column" spacing="xl">
                 <Title order={1} sx={{ fontFamily: 'open-sans' }}>

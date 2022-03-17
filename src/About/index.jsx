@@ -25,7 +25,7 @@ const About = forwardRef((props, ref) => {
             color: '#081c15',
             textAlign: 'center',
             paddingBottom: '20px',
-            fontSize: '2.5rem',
+            fontSize: '2.4rem',
             fontFamily: 'open-sans',
           }}
         >
@@ -62,6 +62,75 @@ const About = forwardRef((props, ref) => {
             </Group>
           </Grid.Col>
         </Grid>
+        <Group position="apart" direction="row" pt="80px" pb="80px">
+          <Group direction="column" position="center">
+            <Image withPlaceholder width="60px" height="60px" />
+            <Title
+              order={1}
+              sx={{
+                fontFamily: 'open-sans',
+                fontSize: '4rem',
+                color: '#3C4A57',
+              }}
+            >
+              4
+            </Title>
+            <Title order={4} sx={{ fontFamily: 'open-sans', color: '#081c15' }}>
+              Stat #1
+            </Title>
+          </Group>
+
+          <Group direction="column" position="center">
+            <Image withPlaceholder width="60px" height="60px" />
+            <Title
+              order={1}
+              sx={{
+                fontFamily: 'open-sans',
+                fontSize: '4rem',
+                color: '#3C4A57',
+              }}
+            >
+              300
+            </Title>
+            <Title order={4} sx={{ fontFamily: 'open-sans', color: '#081c15' }}>
+              Stat #2
+            </Title>
+          </Group>
+
+          <Group direction="column" position="center">
+            <Image withPlaceholder width="60px" height="60px" />
+            <Title
+              order={1}
+              sx={{
+                fontFamily: 'open-sans',
+                fontSize: '4rem',
+                color: '#3C4A57',
+              }}
+            >
+              89%
+            </Title>
+            <Title order={4} sx={{ fontFamily: 'open-sans', color: '#081c15' }}>
+              Stat #3
+            </Title>
+          </Group>
+
+          <Group direction="column" position="center">
+            <Image withPlaceholder width="60px" height="60px" />
+            <Title
+              order={1}
+              sx={{
+                fontFamily: 'open-sans',
+                fontSize: '4rem',
+                color: '#3C4A57',
+              }}
+            >
+              50/50
+            </Title>
+            <Title order={4} sx={{ fontFamily: 'open-sans', color: '#081c15' }}>
+              Stat #4
+            </Title>
+          </Group>
+        </Group>
       </Container>
     </section>
   );
