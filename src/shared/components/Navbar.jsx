@@ -73,7 +73,6 @@ const Navbar = forwardRef((props, ref) => {
           Contact
         </Text>
         <Button
-          className="animate__animated animate__fadeIn animate__faster"
           sx={{
             background: '#1b4332',
             '&:hover': {
