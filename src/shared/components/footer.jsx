@@ -103,7 +103,7 @@ const Footer = (props) => {
           </Grid.Col>
         </Grid>
         {/* <Divider size="xs" pb="40px" /> */}
-        <Text size="xs">@2022 All Rights Reserved</Text>
+        <Text size="xs">Copyright © 2022 All Rights Reserved</Text>
       </Container>
     </footer>
   );

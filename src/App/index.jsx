@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import About from '../About';
 import ContactUs from '../Contact';
 import Home from '../Home';
+import Partners from '../Partners';
 import Services from '../Services';
 import Footer from '../shared/components/footer';
 import Navbar from '../shared/components/Navbar';
@@ -35,6 +36,7 @@ const App = () => {
         <Home />
       </BackgroundImage>
       <Services ref={$servicesRef} />
+      {/* <Partners /> */}
       <About ref={$aboutRef} />
       <ContactUs ref={$contactRef} />
       <Footer
