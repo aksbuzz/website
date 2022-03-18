@@ -21,6 +21,7 @@ import Footer from '../shared/components/footer';
 import Navbar from '../shared/components/Navbar';
 import background from '../shared/static/images/liquid-cheese.svg';
 import Careers from '../Careers';
+import CareerJobs from '../Careers/Jobs';
 
 const App = () => {
   const $contactRef = useRef();
@@ -103,6 +104,7 @@ const App = () => {
                   />
                   <Careers />
                 </BackgroundImage>
+                <CareerJobs />
                 <ContactUs ref={$contactRef} />
                 <Footer
                   onLinkClick={handleScroll}
