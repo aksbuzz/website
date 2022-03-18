@@ -11,8 +11,10 @@ import {
   Text,
   Title,
 } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 const About = forwardRef((props, ref) => {
+  const laptop = useMediaQuery('min-width: 992px)');
   return (
     <section
       id="about"
@@ -47,11 +49,12 @@ const About = forwardRef((props, ref) => {
             display: 'flex',
             alignItems: 'flex-start',
           }}
+          gutter="xl"
         >
-          <Grid.Col span={5}>
+          <Grid.Col xs={6}>
             <Image withPlaceholder height="300px" />
           </Grid.Col>
-          <Grid.Col offset={2} span={5}>
+          <Grid.Col xs={6}>
             <Group direction="column" p="0px">
               <Title order={2} sx={{ fontFamily: 'open-sans' }}>
                 About company name
@@ -79,8 +82,8 @@ const About = forwardRef((props, ref) => {
           >
             Company values
           </Title>
-          <Grid gutter={50} sx={{ marginBottom: '50px' }}>
-            <Grid.Col span={4} gutter="xl">
+          <Grid gutter={laptop ? 50 : 'xl'} sx={{ marginBottom: '50px' }}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <Image withPlaceholder width={50} height={50} radius="lg" />
                 <Title order={4} sx={{ fontFamily: 'open-sans' }}>
@@ -92,7 +95,7 @@ const About = forwardRef((props, ref) => {
                 </Text>
               </Group>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <div>
                   <Image withPlaceholder width={50} height={50} radius="lg" />
@@ -106,7 +109,7 @@ const About = forwardRef((props, ref) => {
                 </Text>
               </Group>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <Image withPlaceholder width={50} height={50} radius="lg" />
                 <Title order={4} sx={{ fontFamily: 'open-sans' }}>
@@ -118,9 +121,7 @@ const About = forwardRef((props, ref) => {
                 </Text>
               </Group>
             </Grid.Col>
-          </Grid>
-          <Grid gutter={50} sx={{ marginTop: '50px', marginBottom: '50px' }}>
-            <Grid.Col span={4}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <Image withPlaceholder width={50} height={50} radius="lg" />
                 <Title order={4} sx={{ fontFamily: 'open-sans' }}>
@@ -132,7 +133,7 @@ const About = forwardRef((props, ref) => {
                 </Text>
               </Group>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <div>
                   <Image withPlaceholder width={50} height={50} radius="lg" />
@@ -146,7 +147,7 @@ const About = forwardRef((props, ref) => {
                 </Text>
               </Group>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <Image withPlaceholder width={50} height={50} radius="lg" />
                 <Title order={4} sx={{ fontFamily: 'open-sans' }}>
@@ -159,76 +160,98 @@ const About = forwardRef((props, ref) => {
               </Group>
             </Grid.Col>
           </Grid>
+          {/* <Grid gutter={50} sx={{ marginTop: '50px', marginBottom: '50px' }}>
+          </Grid> */}
         </Container>
-        <Group position="apart" direction="row" pb="100px" pt="20px">
-          <Group direction="column" position="center">
-            <Image withPlaceholder width="60px" height="60px" />
-            <Title
-              order={1}
-              sx={{
-                fontFamily: 'open-sans',
-                fontSize: '4rem',
-                color: '#3C4A57',
-              }}
-            >
-              4
-            </Title>
-            <Title order={4} sx={{ fontFamily: 'open-sans', color: '#081c15' }}>
-              Stat #1
-            </Title>
-          </Group>
+        <Grid pb="100px" pt="20px" gutter="xl">
+          <Grid.Col xs={6} sm={4} md={3}>
+            <Group direction="column" position="center">
+              <Image withPlaceholder width="60px" height="60px" />
+              <Title
+                order={1}
+                sx={{
+                  fontFamily: 'open-sans',
+                  fontSize: '4rem',
+                  color: '#3C4A57',
+                }}
+              >
+                4
+              </Title>
+              <Title
+                order={4}
+                sx={{ fontFamily: 'open-sans', color: '#081c15' }}
+              >
+                Stat #1
+              </Title>
+            </Group>
+          </Grid.Col>
 
-          <Group direction="column" position="center">
-            <Image withPlaceholder width="60px" height="60px" />
-            <Title
-              order={1}
-              sx={{
-                fontFamily: 'open-sans',
-                fontSize: '4rem',
-                color: '#3C4A57',
-              }}
-            >
-              300
-            </Title>
-            <Title order={4} sx={{ fontFamily: 'open-sans', color: '#081c15' }}>
-              Stat #2
-            </Title>
-          </Group>
+          <Grid.Col xs={6} sm={4} md={3}>
+            <Group direction="column" position="center">
+              <Image withPlaceholder width="60px" height="60px" />
+              <Title
+                order={1}
+                sx={{
+                  fontFamily: 'open-sans',
+                  fontSize: '4rem',
+                  color: '#3C4A57',
+                }}
+              >
+                300
+              </Title>
+              <Title
+                order={4}
+                sx={{ fontFamily: 'open-sans', color: '#081c15' }}
+              >
+                Stat #2
+              </Title>
+            </Group>
+          </Grid.Col>
 
-          <Group direction="column" position="center">
-            <Image withPlaceholder width="60px" height="60px" />
-            <Title
-              order={1}
-              sx={{
-                fontFamily: 'open-sans',
-                fontSize: '4rem',
-                color: '#3C4A57',
-              }}
-            >
-              89%
-            </Title>
-            <Title order={4} sx={{ fontFamily: 'open-sans', color: '#081c15' }}>
-              Stat #3
-            </Title>
-          </Group>
+          <Grid.Col xs={6} sm={4} md={3}>
+            <Group direction="column" position="center">
+              <Image withPlaceholder width="60px" height="60px" />
+              <Title
+                order={1}
+                sx={{
+                  fontFamily: 'open-sans',
+                  fontSize: '4rem',
+                  color: '#3C4A57',
+                }}
+              >
+                89%
+              </Title>
+              <Title
+                order={4}
+                sx={{ fontFamily: 'open-sans', color: '#081c15' }}
+              >
+                Stat #3
+              </Title>
+            </Group>
+          </Grid.Col>
 
-          <Group direction="column" position="center">
-            <Image withPlaceholder width="60px" height="60px" />
-            <Title
-              order={1}
-              sx={{
-                fontFamily: 'open-sans',
-                fontSize: '4rem',
-                color: '#3C4A57',
-              }}
-            >
-              50/50
-            </Title>
-            <Title order={4} sx={{ fontFamily: 'open-sans', color: '#081c15' }}>
-              Stat #4
-            </Title>
-          </Group>
-        </Group>
+          <Grid.Col xs={6} sm={4} md={3}>
+            <Group direction="column" position="center">
+              <Image withPlaceholder width="60px" height="60px" />
+              <Title
+                order={1}
+                sx={{
+                  fontFamily: 'open-sans',
+                  fontSize: '4rem',
+                  color: '#3C4A57',
+                }}
+              >
+                50/50
+              </Title>
+              <Title
+                order={4}
+                sx={{ fontFamily: 'open-sans', color: '#081c15' }}
+              >
+                Stat #4
+              </Title>
+            </Group>
+          </Grid.Col>
+        </Grid>
       </Container>
       <Container size="md">
         <Divider mb="50px" />
@@ -246,7 +269,7 @@ const About = forwardRef((props, ref) => {
           Customer Testimonials
         </Title>
         <Grid mb="50px">
-          <Grid.Col span={4}>
+          <Grid.Col xs={6} sm={6} md={4}>
             <Card shadow="lg" p="lg">
               <Group position="center">
                 <Avatar radius="xl" size="xl" />
@@ -268,7 +291,7 @@ const About = forwardRef((props, ref) => {
               </Blockquote>
             </Card>
           </Grid.Col>
-          <Grid.Col span={4}>
+          <Grid.Col xs={6} sm={6} md={4}>
             <Card shadow="lg" p="lg">
               <Group position="center">
                 <Avatar radius="xl" size="xl" />
@@ -290,7 +313,7 @@ const About = forwardRef((props, ref) => {
               </Blockquote>
             </Card>
           </Grid.Col>
-          <Grid.Col span={4}>
+          <Grid.Col xs={6} sm={6} md={4}>
             <Card shadow="lg" p="lg">
               <Group position="center">
                 <Avatar radius="xl" size="xl" />

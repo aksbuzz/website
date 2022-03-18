@@ -7,9 +7,11 @@ import {
   Image,
   Title,
 } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import rightSVG from '../shared/static/images/right.svg';
 
 const Home = () => {
+  const mobile = useMediaQuery('(max-width: 576px)');
   return (
     <section id="home">
       <Container
@@ -22,7 +24,7 @@ const Home = () => {
         }}
       >
         <Grid>
-          <Grid.Col span={6}>
+          <Grid.Col xs={6}>
             <Group direction="column">
               <Title
                 order={1}
@@ -61,15 +63,13 @@ const Home = () => {
               </Button>
             </Group>
           </Grid.Col>
-          <Grid.Col
-            span={4}
-            offset={2}
-            sx={{ display: 'flex', alignItems: 'center' }}
-          >
-            <Group>
-              <Image src={rightSVG} />
-            </Group>
-          </Grid.Col>
+          {!mobile && (
+            <Grid.Col xs={6} sx={{ display: 'flex', alignItems: 'center' }}>
+              <Group>
+                <Image src={rightSVG} />
+              </Group>
+            </Grid.Col>
+          )}
         </Grid>
       </Container>
     </section>

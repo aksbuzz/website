@@ -1,7 +1,9 @@
 import { Container, Grid, Group, Image, Title } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import careerSVG from '../shared/static/images/career.svg';
 
 const Careers = () => {
+  const mobile = useMediaQuery('(max-width: 576px)');
   return (
     <Container
       size="lg"
@@ -13,7 +15,7 @@ const Careers = () => {
       }}
     >
       <Grid>
-        <Grid.Col span={6}>
+        <Grid.Col xs={6}>
           <Group direction="column">
             <Title
               order={1}
@@ -35,15 +37,18 @@ const Careers = () => {
             </p>
           </Group>
         </Grid.Col>
-        <Grid.Col
-          span={3}
-          offset={3}
-          sx={{ display: 'flex', alignItems: 'center' }}
-        >
-          <Group>
-            <Image src={careerSVG} />
-          </Group>
-        </Grid.Col>
+
+        {!mobile && (
+          <Grid.Col
+            span={3}
+            offset={3}
+            sx={{ display: 'flex', alignItems: 'center' }}
+          >
+            <Group>
+              <Image src={careerSVG} />
+            </Group>
+          </Grid.Col>
+        )}
       </Grid>
     </Container>
   );

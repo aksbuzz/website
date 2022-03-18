@@ -76,7 +76,7 @@ const Footer = (props) => {
               </Text>
             </Group>
           </Grid.Col>
-          <Grid.Col span={3}>
+          <Grid.Col xs={12} sm={3}>
             <Group direction="column">
               <Title order={6} pb="5px">
                 Address

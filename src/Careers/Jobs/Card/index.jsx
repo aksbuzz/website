@@ -51,7 +51,8 @@ const JobsCard = ({ title, description, expertise, extra }) => {
             cursor: 'pointer',
           }}
         >
-          read more
+          read
+          {open ? ' less' : ' more'}
         </Text>
         <Collapse in={open}>
           <Text size="sm" mt="16px">

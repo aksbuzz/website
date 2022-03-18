@@ -2,12 +2,12 @@ Design
    About [DONE]
    Testimonial [DONE]
    Logos / Partners [DONE]
-   Careers
+   Careers [DONE]
    Form, update stylings [DONE]
    Scroll to Top [DONE] 
 
 Delpoy [DONE]
-
+Mobile responsive [DONE]
 Add scroll to section animation [DONE]
 Add animation to element when they load.
 

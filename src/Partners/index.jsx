@@ -1,4 +1,5 @@
 import { Container, Group, Image, Title } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 
 // Logos
 import AppleLogo from '../shared/static/images/apple-music.svg';
@@ -8,6 +9,7 @@ import MicrosoftLogo from '../shared/static/images/clients-04.svg';
 import HubSpotLogo from '../shared/static/images/clients-05.svg';
 
 const Partners = () => {
+  const mobile = useMediaQuery('(max-width: 576px)');
   return (
     <section
       id="partners"
@@ -21,7 +23,10 @@ const Partners = () => {
     >
       <Container size="lg">
         <Group direction="column" position="center" spacing="xl">
-          <Title order={2} sx={{ color: '#081c15', fontFamily: 'open-sans' }}>
+          <Title
+            order={mobile ? 3 : 2}
+            sx={{ color: '#081c15', fontFamily: 'open-sans' }}
+          >
             Trusted by over ___ organizations
           </Title>
           <Group direction="row" spacing="60px" position="center">

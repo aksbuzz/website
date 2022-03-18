@@ -9,10 +9,13 @@ import {
   Text,
   Title,
 } from '@mantine/core';
+import { useMediaQuery } from '@mantine/hooks';
 import Partners from '../Partners';
 import ContactUsImage from '../shared/static/images/contact_us.svg';
 
 const Services = forwardRef((props, ref) => {
+  const mobile = useMediaQuery('(max-width: 576px)');
+  const laptop = useMediaQuery('(min-width: 992px)');
   return (
     <>
       <section id="services" style={{ padding: '50px 0px 0px 0px' }}>
@@ -40,8 +43,8 @@ const Services = forwardRef((props, ref) => {
             Lorem ipsum doler sit amet, consectetur adipiscing elit, sed do
             eiusmod
           </Text>
-          <Grid gutter={50} sx={{ marginBottom: '50px' }}>
-            <Grid.Col span={4} gutter="xl">
+          <Grid gutter={laptop ? 50 : 'xl'} sx={{ marginBottom: '50px' }}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <Image withPlaceholder width={50} height={50} radius="lg" />
                 <Title order={4} sx={{ fontFamily: 'open-sans' }}>
@@ -53,7 +56,7 @@ const Services = forwardRef((props, ref) => {
                 </Text>
               </Group>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <div>
                   <Image withPlaceholder width={50} height={50} radius="lg" />
@@ -67,7 +70,7 @@ const Services = forwardRef((props, ref) => {
                 </Text>
               </Group>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <Image withPlaceholder width={50} height={50} radius="lg" />
                 <Title order={4} sx={{ fontFamily: 'open-sans' }}>
@@ -79,9 +82,7 @@ const Services = forwardRef((props, ref) => {
                 </Text>
               </Group>
             </Grid.Col>
-          </Grid>
-          <Grid gutter={50} sx={{ marginTop: '50px', marginBottom: '50px' }}>
-            <Grid.Col span={4}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <Image withPlaceholder width={50} height={50} radius="lg" />
                 <Title order={4} sx={{ fontFamily: 'open-sans' }}>
@@ -93,7 +94,7 @@ const Services = forwardRef((props, ref) => {
                 </Text>
               </Group>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <div>
                   <Image withPlaceholder width={50} height={50} radius="lg" />
@@ -107,7 +108,7 @@ const Services = forwardRef((props, ref) => {
                 </Text>
               </Group>
             </Grid.Col>
-            <Grid.Col span={4}>
+            <Grid.Col xs={6} sm={4}>
               <Group direction="column" position="center">
                 <Image withPlaceholder width={50} height={50} radius="lg" />
                 <Title order={4} sx={{ fontFamily: 'open-sans' }}>
@@ -147,7 +148,7 @@ const Services = forwardRef((props, ref) => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod
           </Text>
-          <Grid gutter={40} sx={{ marginBottom: '50px' }}>
+          <Grid sx={{ marginBottom: '50px' }}>
             <Grid.Col
               span={6}
               sx={{
@@ -168,12 +169,20 @@ const Services = forwardRef((props, ref) => {
               </Group>
             </Grid.Col>
             <Grid.Col span={6}>
-              <Image withPlaceholder width={150} height={250} />
+              <Image
+                withPlaceholder
+                width={mobile ? 75 : 150}
+                height={mobile ? 125 : 250}
+              />
             </Grid.Col>
           </Grid>
-          <Grid gutter={40} sx={{ marginBottom: '50px' }}>
+          <Grid sx={{ marginBottom: '50px' }}>
             <Grid.Col span={6}>
-              <Image withPlaceholder width={150} height={250} />
+              <Image
+                withPlaceholder
+                width={mobile ? 75 : 150}
+                height={mobile ? 125 : 250}
+              />
             </Grid.Col>
             <Grid.Col
               span={6}
@@ -195,7 +204,7 @@ const Services = forwardRef((props, ref) => {
               </Group>
             </Grid.Col>
           </Grid>
-          <Grid gutter={40}>
+          <Grid>
             <Grid.Col
               span={6}
               sx={{
@@ -216,7 +225,11 @@ const Services = forwardRef((props, ref) => {
               </Group>
             </Grid.Col>
             <Grid.Col span={6}>
-              <Image withPlaceholder width={150} height={250} />
+              <Image
+                withPlaceholder
+                width={mobile ? 75 : 150}
+                height={mobile ? 125 : 250}
+              />
             </Grid.Col>
           </Grid>
         </Container>
@@ -235,7 +248,7 @@ const Services = forwardRef((props, ref) => {
               alignItems: 'center',
             }}
           >
-            <Grid.Col span={6}>
+            <Grid.Col xs={6}>
               <Group direction="column" spacing="xl">
                 <Title order={1} sx={{ fontFamily: 'open-sans' }}>
                   To learn how ________ can help to drive your business?
@@ -253,7 +266,7 @@ const Services = forwardRef((props, ref) => {
                 </Button>
               </Group>
             </Grid.Col>
-            <Grid.Col offset={1} span={5}>
+            <Grid.Col xs={6}>
               <Image src={ContactUsImage} />
             </Grid.Col>
           </Grid>

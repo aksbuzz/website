@@ -28,9 +28,8 @@ const CareerJobs = () => {
       </Title>
       <Grid gutter="md" mb="50px">
         {jobsData.map((job) => (
-          <Grid.Col span={4}>
+          <Grid.Col key={job.id} xs={6} sm={4}>
             <JobsCard
-              key={job.id}
               title={job.title}
               description={job.description}
               expertise={job.expertise}

@@ -18,9 +18,12 @@ import {
   MdLocalPhone,
   MdOutlineAlternateEmail,
 } from 'react-icons/md';
+import { useMediaQuery } from '@mantine/hooks';
 import { BORDERS } from '../shared/constants/css';
 
 const ContactUs = forwardRef((props, ref) => {
+  const mobile = useMediaQuery('(max-width: 576px)');
+
   return (
     <section
       ref={ref}
@@ -46,7 +49,7 @@ const ContactUs = forwardRef((props, ref) => {
           size="md"
           sx={{
             paddingBottom: '50px',
-            maxWidth: '100px',
+            maxWidth: mobile ? '80px' : '100px',
             margin: '0 auto',
           }}
         />
@@ -59,64 +62,8 @@ const ContactUs = forwardRef((props, ref) => {
             }}
           >
             <Grid.Col
-              span={6}
-              sx={{
-                padding: '30px',
-              }}
-            >
-              <form>
-                <TextInput
-                  styles={{
-                    label: {
-                      color: '#656b70',
-                      fontSize: '12px',
-                      fontWeight: '600',
-                      marginBottom: '0px',
-                    },
-                  }}
-                  type="text"
-                  label="Full name"
-                  size="md"
-                  pb="30px"
-                />
-                <TextInput
-                  styles={{
-                    label: {
-                      color: '#656b70',
-                      fontSize: '12px',
-                      fontWeight: '600',
-                      marginBottom: '0px',
-                    },
-                  }}
-                  type="email"
-                  label="E-mail"
-                  size="md"
-                  pb="30px"
-                />
-                <Textarea
-                  styles={{
-                    label: {
-                      color: '#656b70',
-                      fontSize: '12px',
-                      fontWeight: '600',
-                      marginBottom: '0px',
-                    },
-                  }}
-                  label="Message"
-                  autosize
-                  minRows={4}
-                  maxRows={8}
-                  pb="30px"
-                />
-                <Group position="right">
-                  <Button variant="filled" color="teal">
-                    Send
-                  </Button>
-                </Group>
-              </form>
-            </Grid.Col>
-            <Grid.Col
-              span={6}
+              xs={12}
+              sm={6}
               sx={{
                 background: '#b7e4c7',
                 padding: '30px',
@@ -220,6 +167,64 @@ const ContactUs = forwardRef((props, ref) => {
                   </Group>
                 </Group>
               </div>
+            </Grid.Col>
+            <Grid.Col
+              xs={12}
+              sm={6}
+              sx={{
+                padding: '30px',
+              }}
+            >
+              <form>
+                <TextInput
+                  styles={{
+                    label: {
+                      color: '#656b70',
+                      fontSize: '12px',
+                      fontWeight: '600',
+                      marginBottom: '0px',
+                    },
+                  }}
+                  type="text"
+                  label="Full name"
+                  size="md"
+                  pb="30px"
+                />
+                <TextInput
+                  styles={{
+                    label: {
+                      color: '#656b70',
+                      fontSize: '12px',
+                      fontWeight: '600',
+                      marginBottom: '0px',
+                    },
+                  }}
+                  type="email"
+                  label="E-mail"
+                  size="md"
+                  pb="30px"
+                />
+                <Textarea
+                  styles={{
+                    label: {
+                      color: '#656b70',
+                      fontSize: '12px',
+                      fontWeight: '600',
+                      marginBottom: '0px',
+                    },
+                  }}
+                  label="Message"
+                  autosize
+                  minRows={4}
+                  maxRows={8}
+                  pb="30px"
+                />
+                <Group position="right">
+                  <Button variant="filled" color="teal">
+                    Send
+                  </Button>
+                </Group>
+              </form>
             </Grid.Col>
           </Grid>
         </Card>
