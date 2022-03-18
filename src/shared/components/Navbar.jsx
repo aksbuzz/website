@@ -4,11 +4,14 @@
 /* eslint-disable func-names */
 import { Button, Container, Group, Image, Text } from '@mantine/core';
 import { forwardRef } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { BORDERS } from '../constants/css';
 
 const Navbar = forwardRef((props, ref) => {
   const { onLinkClick, refs } = props;
+  const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <Container size="xl">
@@ -26,7 +29,7 @@ const Navbar = forwardRef((props, ref) => {
         <Image radius="xs" withPlaceholder width={200} height={50} />
         <Group position="apart" sx={{ gap: '40px' }}>
           <Text
-            onClick={() => onLinkClick(refs.home)}
+            onClick={() => navigate('/')}
             sx={{
               color: 'white',
               transition: 'all 0.2s ease',
@@ -39,19 +42,23 @@ const Navbar = forwardRef((props, ref) => {
           >
             Home
           </Text>
-          <Text
-            onClick={() => onLinkClick(refs.services)}
-            sx={{
-              color: 'white',
-              '&:hover': {
-                textDecoration: 'none',
-                cursor: 'pointer',
-                color: '#dad7cd',
-              },
-            }}
-          >
-            Services
-          </Text>
+          {!location.pathname.includes('careers') && (
+            <Text
+              onClick={() => onLinkClick(refs.services)}
+              sx={{
+                color: 'white',
+                '&:hover': {
+                  textDecoration: 'none',
+                  cursor: 'pointer',
+                  color: '#dad7cd',
+                },
+              }}
+            >
+              Services
+            </Text>
+          )}
+
+          {!location.pathname.includes('careers') && (
           <Text
             onClick={() => onLinkClick(refs.about)}
             sx={{
@@ -65,6 +72,7 @@ const Navbar = forwardRef((props, ref) => {
           >
             About
           </Text>
+          )}
           <Text
             onClick={() => onLinkClick(refs.contact)}
             sx={{
@@ -79,6 +87,7 @@ const Navbar = forwardRef((props, ref) => {
             Contact
           </Text>
           <Text
+            onClick={() => navigate('/careers')}
             sx={{
               color: 'white',
               '&:hover': {

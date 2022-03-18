@@ -10,15 +10,17 @@ import {
 import { useWindowScroll } from '@mantine/hooks';
 import { AiOutlineArrowUp } from 'react-icons/ai';
 
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import About from '../About';
 import ContactUs from '../Contact';
 import Home from '../Home';
-import Partners from '../Partners';
+// import Partners from '../Partners';
 import Services from '../Services';
 
 import Footer from '../shared/components/footer';
 import Navbar from '../shared/components/Navbar';
 import background from '../shared/static/images/liquid-cheese.svg';
+import Careers from '../Careers';
 
 const App = () => {
   const $contactRef = useRef();
@@ -35,19 +37,6 @@ const App = () => {
   return (
     <>
       <NormalizeCSS />
-      <BackgroundImage src={background}>
-        <Navbar
-          ref={$homeRef}
-          onLinkClick={handleScroll}
-          refs={{
-            contact: $contactRef,
-            home: $homeRef,
-            services: $servicesRef,
-            about: $aboutRef,
-          }}
-        />
-        <Home />
-      </BackgroundImage>
       <Affix position={{ bottom: 20, right: 20 }}>
         <Transition transition="slide-up" mounted={scroll.y > 500}>
           {(transitionStyles) => (
@@ -62,19 +51,73 @@ const App = () => {
           )}
         </Transition>
       </Affix>
-      <Services ref={$servicesRef} />
-      {/* <Partners /> */}
-      <About ref={$aboutRef} />
-      <ContactUs ref={$contactRef} />
-      <Footer
-        onLinkClick={handleScroll}
-        refs={{
-          contact: $contactRef,
-          home: $homeRef,
-          services: $servicesRef,
-          about: $aboutRef,
-        }}
-      />
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <BackgroundImage src={background}>
+                  <Navbar
+                    ref={$homeRef}
+                    onLinkClick={handleScroll}
+                    refs={{
+                      contact: $contactRef,
+                      home: $homeRef,
+                      services: $servicesRef,
+                      about: $aboutRef,
+                    }}
+                  />
+                  <Home />
+                </BackgroundImage>
+                <Services ref={$servicesRef} />
+                {/* <Partners /> */}
+                <About ref={$aboutRef} />
+                <ContactUs ref={$contactRef} />
+                <Footer
+                  onLinkClick={handleScroll}
+                  refs={{
+                    contact: $contactRef,
+                    home: $homeRef,
+                    services: $servicesRef,
+                    about: $aboutRef,
+                  }}
+                />
+              </>
+            }
+          />
+          <Route
+            path="/careers"
+            element={
+              <>
+                <BackgroundImage src={background}>
+                  <Navbar
+                    ref={$homeRef}
+                    onLinkClick={handleScroll}
+                    refs={{
+                      contact: $contactRef,
+                      home: $homeRef,
+                      services: $servicesRef,
+                      about: $aboutRef,
+                    }}
+                  />
+                  <Careers />
+                </BackgroundImage>
+                <ContactUs ref={$contactRef} />
+                <Footer
+                  onLinkClick={handleScroll}
+                  refs={{
+                    contact: $contactRef,
+                    home: $homeRef,
+                    services: $servicesRef,
+                    about: $aboutRef,
+                  }}
+                />
+              </>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };

@@ -8,10 +8,14 @@ import {
   Title,
   // Title,
 } from '@mantine/core';
+import { useWindowScroll } from '@mantine/hooks';
+import { useNavigate } from 'react-router-dom';
 // import { MdLocalPhone } from 'react-icons/md';
 
 const Footer = (props) => {
   const { onLinkClick, refs } = props;
+  const navigate = useNavigate();
+  const [scroll, scrollTo] = useWindowScroll();
   return (
     <footer
       style={{
@@ -44,25 +48,14 @@ const Footer = (props) => {
                 Quick links
               </Title>
               <Text
-                onClick={() => onLinkClick(refs.home)}
+                onClick={() => {
+                  navigate('/');
+                  scrollTo({ y: 0 });
+                }}
                 size="xs"
                 sx={{ textTransform: 'uppercase', cursor: 'pointer' }}
               >
                 Home
-              </Text>
-              <Text
-                onClick={() => onLinkClick(refs.services)}
-                size="xs"
-                sx={{ textTransform: 'uppercase', cursor: 'pointer' }}
-              >
-                Services
-              </Text>
-              <Text
-                onClick={() => onLinkClick(refs.about)}
-                size="xs"
-                sx={{ textTransform: 'uppercase', cursor: 'pointer' }}
-              >
-                About
               </Text>
               <Text
                 onClick={() => onLinkClick(refs.contact)}
@@ -72,6 +65,10 @@ const Footer = (props) => {
                 Contact
               </Text>
               <Text
+                onClick={() => {
+                  navigate('/careers');
+                  scrollTo({ y: 0 });
+                }}
                 size="xs"
                 sx={{ textTransform: 'uppercase', cursor: 'pointer' }}
               >
