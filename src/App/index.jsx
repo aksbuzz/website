@@ -49,15 +49,15 @@ const App = () => {
         <Home />
       </BackgroundImage>
       <Affix position={{ bottom: 20, right: 20 }}>
-        <Transition transition="slide-up" mounted={scroll.y > 0}>
+        <Transition transition="slide-up" mounted={scroll.y > 500}>
           {(transitionStyles) => (
             <Button
-              leftIcon={<AiOutlineArrowUp />}
               style={transitionStyles}
               color="teal"
               onClick={() => scrollTo({ y: 0 })}
+              radius="xl"
             >
-              Scroll to top
+              <AiOutlineArrowUp />
             </Button>
           )}
         </Transition>

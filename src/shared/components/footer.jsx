@@ -5,6 +5,7 @@ import {
   Group,
   Image,
   Text,
+  Title,
   // Title,
 } from '@mantine/core';
 // import { MdLocalPhone } from 'react-icons/md';
@@ -27,6 +28,9 @@ const Footer = (props) => {
         <Grid pb="40px">
           <Grid.Col span={3}>
             <Group direction="column" spacing="xs">
+              <Title order={6} pb="15px">
+                Company
+              </Title>
               <Image src="" alt="company_logo" height={30} />
               {/* <Text size="xs">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
@@ -34,8 +38,11 @@ const Footer = (props) => {
               </Text> */}
             </Group>
           </Grid.Col>
-          <Grid.Col offset={2} span={1}>
+          <Grid.Col offset={2} span={4}>
             <Group direction="column" spacing="xs">
+              <Title order={6} pb="15px">
+                Quick links
+              </Title>
               <Text
                 onClick={() => onLinkClick(refs.home)}
                 size="xs"
@@ -57,10 +64,6 @@ const Footer = (props) => {
               >
                 About
               </Text>
-            </Group>
-          </Grid.Col>
-          <Grid.Col span={3}>
-            <Group direction="column" spacing="xs">
               <Text
                 onClick={() => onLinkClick(refs.contact)}
                 size="xs"
@@ -72,12 +75,15 @@ const Footer = (props) => {
                 size="xs"
                 sx={{ textTransform: 'uppercase', cursor: 'pointer' }}
               >
-                Partners
+                Careers
               </Text>
             </Group>
           </Grid.Col>
           <Grid.Col span={3}>
             <Group direction="column">
+              <Title order={6} pb="5px">
+                Address
+              </Title>
               <Group
                 direction="column"
                 sx={{

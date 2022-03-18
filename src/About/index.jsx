@@ -1,5 +1,8 @@
 import { forwardRef } from 'react';
 import {
+  Avatar,
+  Blockquote,
+  Card,
   Container,
   Divider,
   Grid,
@@ -62,7 +65,102 @@ const About = forwardRef((props, ref) => {
             </Group>
           </Grid.Col>
         </Grid>
-        <Group position="apart" direction="row" pt="80px" pb="80px">
+        <Container size="md" pt="80px">
+          <Title
+            pb="55px"
+            order={1}
+            sx={{
+              color: '#081c15',
+              textAlign: 'center',
+              paddingBottom: '20px',
+              fontSize: '1.8rem',
+              fontFamily: 'open-sans',
+            }}
+          >
+            Company values
+          </Title>
+          <Grid gutter={50} sx={{ marginBottom: '50px' }}>
+            <Grid.Col span={4} gutter="xl">
+              <Group direction="column" position="center">
+                <Image withPlaceholder width={50} height={50} radius="lg" />
+                <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                  Awesome Company Value
+                </Title>
+                <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
+                  A pseudo-Latin text used in web design, layout, and printing
+                  in place of things to emphasise design.
+                </Text>
+              </Group>
+            </Grid.Col>
+            <Grid.Col span={4}>
+              <Group direction="column" position="center">
+                <div>
+                  <Image withPlaceholder width={50} height={50} radius="lg" />
+                </div>
+                <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                  Awesome Company Value
+                </Title>
+                <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
+                  A pseudo-Latin text used in web design, layout, and printing
+                  in place of things to emphasise design.
+                </Text>
+              </Group>
+            </Grid.Col>
+            <Grid.Col span={4}>
+              <Group direction="column" position="center">
+                <Image withPlaceholder width={50} height={50} radius="lg" />
+                <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                  Awesome Company Value
+                </Title>
+                <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
+                  A pseudo-Latin text used in web design, layout, and printing
+                  in place of things to emphasise design.
+                </Text>
+              </Group>
+            </Grid.Col>
+          </Grid>
+          <Grid gutter={50} sx={{ marginTop: '50px', marginBottom: '50px' }}>
+            <Grid.Col span={4}>
+              <Group direction="column" position="center">
+                <Image withPlaceholder width={50} height={50} radius="lg" />
+                <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                  Awesome Company Value
+                </Title>
+                <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
+                  A pseudo-Latin text used in web design, layout, and printing
+                  in place of things to emphasise design.
+                </Text>
+              </Group>
+            </Grid.Col>
+            <Grid.Col span={4}>
+              <Group direction="column" position="center">
+                <div>
+                  <Image withPlaceholder width={50} height={50} radius="lg" />
+                </div>
+                <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                  Awesome Company Value
+                </Title>
+                <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
+                  A pseudo-Latin text used in web design, layout, and printing
+                  in place of things to emphasise design.
+                </Text>
+              </Group>
+            </Grid.Col>
+            <Grid.Col span={4}>
+              <Group direction="column" position="center">
+                <Image withPlaceholder width={50} height={50} radius="lg" />
+                <Title order={4} sx={{ fontFamily: 'open-sans' }}>
+                  Awesome Company Value
+                </Title>
+                <Text size="md" align="center" sx={{ color: '#3C4A57' }}>
+                  A pseudo-Latin text used in web design, layout, and printing
+                  in place of things to emphasise design.
+                </Text>
+              </Group>
+            </Grid.Col>
+          </Grid>
+        </Container>
+        <Group position="apart" direction="row" pb="100px" pt="20px">
           <Group direction="column" position="center">
             <Image withPlaceholder width="60px" height="60px" />
             <Title
@@ -131,6 +229,90 @@ const About = forwardRef((props, ref) => {
             </Title>
           </Group>
         </Group>
+      </Container>
+      <Container size="md">
+        <Divider mb="50px" />
+        <Title
+          order={1}
+          mb="40px"
+          sx={{
+            color: '#081c15',
+            textAlign: 'center',
+            paddingBottom: '20px',
+            fontSize: '2.4rem',
+            fontFamily: 'open-sans',
+          }}
+        >
+          Customer Testimonials
+        </Title>
+        <Grid mb="50px">
+          <Grid.Col span={4}>
+            <Card shadow="lg" p="lg">
+              <Group position="center">
+                <Avatar radius="xl" size="xl" />
+              </Group>
+              {/* <Divider /> */}
+              <Blockquote
+                cite="– Forrest Gump"
+                icon={null}
+                sx={{
+                  textAlign: 'justify',
+                  fontSize: '16px',
+                  color: '#3C4A57',
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud labore et dolore magna
+                aliqua.
+              </Blockquote>
+            </Card>
+          </Grid.Col>
+          <Grid.Col span={4}>
+            <Card shadow="lg" p="lg">
+              <Group position="center">
+                <Avatar radius="xl" size="xl" />
+              </Group>
+              {/* <Divider /> */}
+              <Blockquote
+                cite="– Forrest Gump"
+                icon={null}
+                sx={{
+                  textAlign: 'justify',
+                  fontSize: '16px',
+                  color: '#3C4A57',
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud labore et dolore magna
+                aliqua.
+              </Blockquote>
+            </Card>
+          </Grid.Col>
+          <Grid.Col span={4}>
+            <Card shadow="lg" p="lg">
+              <Group position="center">
+                <Avatar radius="xl" size="xl" />
+              </Group>
+              {/* <Divider /> */}
+              <Blockquote
+                cite="– Forrest Gump"
+                icon={null}
+                sx={{
+                  textAlign: 'justify',
+                  fontSize: '16px',
+                  color: '#3C4A57',
+                }}
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud labore et dolore magna
+                aliqua.
+              </Blockquote>
+            </Card>
+          </Grid.Col>
+        </Grid>
       </Container>
     </section>
   );

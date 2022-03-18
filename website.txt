@@ -1,6 +1,6 @@
 Design
-   About
-   Testimonial
+   About [DONE]
+   Testimonial [DONE]
    Logos / Partners [DONE]
    Careers
    Form, update stylings [DONE]
